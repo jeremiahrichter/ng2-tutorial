@@ -1,6 +1,7 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 import 'package:angular2_quickstart/dashboard_component.dart';
+import 'package:angular2_quickstart/hero_detail_component.dart';
 import 'package:angular2_quickstart/heroes_component.dart';
 import 'package:angular2_quickstart/hero_service.dart';
 
@@ -28,6 +29,11 @@ import 'package:angular2_quickstart/hero_service.dart';
     name: 'Dashboard',
     component: DashboardComponent,
     useAsDefault: true
+  ),
+  const Route(
+    path: '/detail/:id',
+    name: 'HeroDetail',
+    component: HeroDetailComponent,
   )
 ])
 class AppComponent {
