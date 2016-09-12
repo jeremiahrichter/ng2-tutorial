@@ -15,21 +15,16 @@ import 'package:angular2_quickstart/hero_service.dart';
     </nav>
     <router-outlet></router-outlet>
     ''',
+    styleUrls: const ['app_component.css'],
     directives: const [ROUTER_DIRECTIVES],
-    providers: const [HeroService, ROUTER_PROVIDERS]
-)
+    providers: const [HeroService, ROUTER_PROVIDERS])
 @RouteConfig(const [
+  const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent),
   const Route(
-    path: '/heroes',
-    name: 'Heroes',
-    component: HeroesComponent
-  ),
-  const Route(
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: DashboardComponent,
-    useAsDefault: true
-  ),
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: DashboardComponent,
+      useAsDefault: true),
   const Route(
     path: '/detail/:id',
     name: 'HeroDetail',
